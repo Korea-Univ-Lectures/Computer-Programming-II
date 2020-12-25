@@ -1,0 +1,46 @@
+package Schedule_Project4;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.Vector;
+
+import javax.swing.event.*;
+
+public class Main_GUI {
+
+	public static void main(String[] args) {
+		Main_GUI s = new Main_GUI();
+		GroupManager gm =new GroupManager();
+		Vector <Group> gv =gm.gv;
+		TableManager tm =new TableManager();
+		Vector <Table> tv =tm.tv;
+		
+		gm.addCourseGroup("기타교양",true);
+		gm.addCourseGroup("컴프터 프로그래밍",false);
+		gm.addCourseGroup("자정진",false);
+		
+		gm.setTempGroup(0);
+		gm.addCourse("기초통계학", "송대선", 2, 4);
+		gm.addCourse("하이퍼 텍스트와 계산가능성", "박성빈", 6, 2);
+		
+		gm.setTempGroup(1);
+		gm.addCourse("컴퓨터 프로그래밍a", "이만영", 3, 4);
+		gm.addCourse("컴퓨터 프로그래밍b", "이만영", 10, 2);
+		
+		gm.setTempGroup(2);
+		gm.addCourse("자유정의진리a", "이만영", 4, 4);
+
+		tm.calculateTable(gv);
+		gm.printGV();
+		
+		tm.sortbyPri();
+		tm.printTV();
+		tm.printPri();
+		
+		tm.DayFilter(1);
+		tm.printTV();
+		tm.printPri();
+	}
+
+}

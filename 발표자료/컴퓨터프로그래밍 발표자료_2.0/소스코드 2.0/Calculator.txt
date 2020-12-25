@@ -1,0 +1,139 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+
+public class Calculator extends JFrame implements ActionListener {
+
+	JTextField Text1, Text2;
+	int Prev, temp, result;
+	String tempAO, tempInput = "";
+	boolean finish = false;
+	JButton Button[] = new JButton[16];
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String input = e.getActionCommand();
+
+		// 입력 판단, 기능 실행
+		if (input.equals("+")) {
+			Prev = temp;
+			tempAO = "+";
+			tempInput = "";
+			Text2.setText("더하기");
+		}
+
+		else if (input.equals("-")) {
+			Prev = temp;
+			tempAO = "-";
+			tempInput = "";
+			Text2.setText("빼기");
+		}
+
+		else if (input.equals("X")) {
+			Prev = temp;
+			tempAO = "X";
+			tempInput = "";
+			Text2.setText("곱하기");
+		}
+
+		else if (input.equals("/")) {
+			Prev = temp;
+			tempAO = "/";
+			tempInput = "";
+			Text2.setText("나누기");
+		}
+
+		else if (input.equals("C")) {
+			tempInput = "";
+			temp = 0;
+			Prev = 0;
+			Text1.setText("");
+			Text2.setText("초기화");
+		}
+
+		else if (input.equals("=")) {
+			if (tempAO.equals("+")) {
+				result = Prev + temp;
+				Text1.setText(String.valueOf(result));
+				finish = true;
+			}
+
+			else if (tempAO.equals("-")) {
+				result = Prev - temp;
+				Text1.setText(String.valueOf(result));
+				finish = true;
+			}
+
+			else if (tempAO.equals("X")) {
+				result = Prev * temp;
+				Text1.setText(String.valueOf(result));
+				finish = true;
+			}
+
+			else if (tempAO.equals("/")) {
+				result = Prev / temp;
+				Text1.setText(String.valueOf(result));
+				finish = true;
+			}
+		}
+
+		else {
+			if (finish) {
+				Text1.setText("0");
+				finish = false;
+				temp = 0;
+				Prev = 0;
+				tempInput = "";
+			}
+			tempInput += e.getActionCommand();
+			System.out.println(tempInput);
+			Text1.setText(tempInput);
+			temp = Integer.parseInt(tempInput);
+		}
+	}
+
+	public Calculator() {
+		// 생성자, UI 모양 결정
+		super("Calculator");
+		super.setResizable(true);
+		setLayout(new BorderLayout());
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(300, 400);
+		Text1 = new JTextField("", 15);
+		Text2 = new JTextField("", 5);
+		Text2.setEnabled(false);
+		JPanel P1 = new JPanel();
+		JPanel P2 = new JPanel();
+		P1.add(Text1);
+		P1.add(Text2);
+		P2.setLayout(new GridLayout(4, 4, 10, 10));
+		String ButtonValue[] = { "1", "2", "3", "X", "4", "5", "6", "/", "7", "8", "9", "+", "C", "0", "=", "-" };
+		// 버튼에 값 대입
+		for (int i = 0; i <= 15; i++) {
+			Button[i] = new JButton(ButtonValue[i]);
+			P2.add(Button[i]);
+			Button[i].addActionListener(this);
+			Button[i].setBackground(new Color(175, 175, 175));
+			Button[i].setFont(new Font("굴림", Font.BOLD, 18));
+			Button[i].setForeground(Color.WHITE);
+			if (i == 3 || i == 7 || i == 11 || i == 15) {
+				Button[i].setBackground(new Color(153, 0, 225));
+				Button[i].setFont(new Font("굴림", Font.BOLD, 18));
+				Button[i].setForeground(Color.WHITE);
+			} else if (i == 12 || i == 14) {
+				Button[i].setBackground(new Color(225, 166, 0));
+				Button[i].setFont(new Font("굴림", Font.BOLD, 18));
+				Button[i].setForeground(Color.DARK_GRAY);
+			}
+		}
+
+		add(P1, BorderLayout.NORTH);
+		add(P2, BorderLayout.CENTER);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Calculator();
+	}
+}

@@ -1,0 +1,64 @@
+package Schedule_Project4;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+class GroupManager {
+	Vector <Group> gv =new Vector(); //총 강의 그룹
+	int tempGruopIndex;//현재 선택 강의 그룹
+	
+	//강의 그룹 추가
+	void addCourseGroup(String name, boolean b) {
+		Group g1= new Group(name, b);
+		gv.add(g1);
+	}
+	
+	//강의 그룹 추가
+	void addCourse(String name, String ins, int pri, int sta) {
+		course c1 = new course(name, ins, pri, sta,getTime());
+		gv.elementAt(tempGruopIndex).cv.add(c1);
+	}
+	
+	//현재 선택 그룹 설정, 변경
+	void setTempGroup (int i) {
+		if(i<gv.size())
+			tempGruopIndex=i;
+		else
+			System.out.println("그러한 인덱스는 존재하지 않습니다.");
+	}
+	
+	//시간 백터 생성 매소드
+	Vector<time> getTime() {
+		Vector <time> tv =new Vector();
+		int day;
+		int hour;
+			
+		Scanner sc = new Scanner(System.in);
+			
+		while(true) {
+			day=sc.nextInt();
+			if(day==-1)break;
+			else {
+				hour=sc.nextInt();
+				if(hour==-1)break;
+				else {
+					time t =new time(day,hour);
+					tv.add(t);
+				}
+			}
+		}
+		return tv;
+	}
+	
+	//GV 프린트
+		void printGV() {
+		for(int i=0; i<gv.size();i++) {
+			System.out.print(gv.elementAt(i).GroupName);
+				
+			for(int j=0; j<gv.elementAt(i).cv.size();j++) {
+				System.out.print("\t"+gv.elementAt(i).cv.elementAt(j).courseName);
+			}
+			System.out.println();
+		}
+	}
+}

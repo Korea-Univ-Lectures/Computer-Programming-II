@@ -1,0 +1,42 @@
+package Club_11_29;
+
+class num1{
+	void anwser1() {
+		int arr[]= {10, -4, 3, 1, 5, 6, -35, 12,21, -1};
+		int max=arr[0]+arr[1];
+		for(int i=1;i<arr.length-1;i++) {
+			if(max<arr[i]+arr[i+1]) 
+				max=arr[i]+arr[i+1];
+		}
+		System.out.println(max);
+	}
+	
+	int awnser2(int n) {
+		int coin[]= {1,2,5};
+	
+		if (n==0) {
+			return 1;
+			}
+		else {
+			int sum=0;
+			for(int i=0;i<3;i++) 
+				{
+				if(n-coin[i]>=0&&awnser2(n-coin[i])>0)
+					{
+						sum+=awnser2(n-coin[i]);
+					}
+				}
+			return sum;	
+		}
+	}
+}
+public class ver1_0 {
+
+	public static void main(String[] args) {
+		num1 n1 =new num1();
+		n1.anwser1();
+		System.out.println(n1.awnser2(1));
+		
+	}
+
+}

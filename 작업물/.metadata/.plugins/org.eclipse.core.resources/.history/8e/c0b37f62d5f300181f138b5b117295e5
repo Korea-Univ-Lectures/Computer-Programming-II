@@ -1,0 +1,19 @@
+package Schedule_Project4;
+
+import java.util.Vector;
+
+class course {
+	String courseName;//강의 이름
+	String instructor;//교수님 이름
+	int priority;//강의 선호도
+	int stability;//강의 수강 안정도
+	Vector<time> tv;//강의 시간 기록
+	
+	course(String courseName, String instructor, int priority, int stability, Vector<time> tv){
+		this.courseName=courseName;
+		this.instructor=instructor;
+		this.priority=priority;
+		this.stability=stability;
+		this.tv=tv;
+	}
+}

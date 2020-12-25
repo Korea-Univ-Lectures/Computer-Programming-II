@@ -1,0 +1,79 @@
+package Schedule_Project4;
+
+import java.util.Vector;
+
+
+class Table implements Cloneable {
+	boolean timeTable[][] = new boolean[9][6];
+	
+	Table() {
+		for(int i=1;i<=5;i++) {
+			for(int j=1;j<=8;j++) {
+				boolean b=true;
+				timeTable[j][i]=b;
+			}
+		}
+	}
+	
+	Vector <course> courseInfo = new Vector();
+	int totalPri=0;//강의 선호도 총량
+	int totalSta=0;//강의 수강 안정도 총량
+	
+	//Table 초기설정
+	public void setTable(course c) {
+		courseInfo.add(c);
+		totalPri=c.priority;
+		totalSta=c.stability;
+		
+		for(int i=0;i<c.tv.size();i++) {
+			timeTable[c.tv.elementAt(i).period][c.tv.elementAt(i).day]=false;
+		}
+	}
+	
+	//Table에 Course 추가 가능여부
+	public boolean addAbleCourse(course c) {
+		boolean IsaddAble =true;
+		
+		for(int i=0;i<c.tv.size();i++) {
+			if(timeTable[c.tv.elementAt(i).period][c.tv.elementAt(i).day]==false) {
+				IsaddAble=false;
+				break;
+			}
+		}
+		return IsaddAble;
+	}
+	
+	//Table에 Course 추가
+	public void addTable (course c) {
+			courseInfo.add(c);
+			totalPri+=c.priority;
+			totalSta+=c.stability;
+			
+			for(int i=0;i<c.tv.size();i++) {
+				timeTable[c.tv.elementAt(i).period][c.tv.elementAt(i).day]=false;
+			}
+		
+	}
+
+	//Table의 Clone 생성
+	public Object clone() throws CloneNotSupportedException {
+		Table copy= (Table)super.clone();
+		copy.timeTable = new boolean[9][6];
+		for(int i=0;i<6;i++) {
+			for(int j=0;j<9;j++) {
+				copy.timeTable[j][i]=timeTable[j][i];
+			}
+		}
+		copy.courseInfo = (Vector <course>)courseInfo.clone();
+		
+		for(int i=0;i<copy.courseInfo.size();i++) {
+			copy.courseInfo.elementAt(i).tv=(Vector <time>)courseInfo.elementAt(i).tv.clone();
+			/*for(int j=0;j<copy.courseInfo.elementAt(i).tv.size();j++) {
+				copy.courseInfo.elementAt(i).tv.elementAt(j).day=courseInfo.elementAt(i).tv.elementAt(j).day;
+				copy.courseInfo.elementAt(i).tv.elementAt(j).period=courseInfo.elementAt(i).tv.elementAt(j).period;
+			}*/
+		}
+		
+		return copy;
+	}
+}

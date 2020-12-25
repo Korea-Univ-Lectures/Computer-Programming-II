@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;GUI_Swing&apos; to &apos;Presentation/src&apos;&#x0D;&#x0A;- Original project: &apos;University_Class&apos;&#x0D;&#x0A;- Destination element: &apos;Presentation/src&apos;&#x0D;&#x0A;- Original element: &apos;University_Class/src/GUI_Swing&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=Presentation/src" element1="/src&lt;GUI_Swing" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1542822399735" version="1.0"/>
+</session>
