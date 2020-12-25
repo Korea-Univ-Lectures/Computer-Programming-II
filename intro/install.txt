@@ -1,0 +1,24 @@
+- 파이썬 설치
+https://www.python.org/
+
+윈도우 시작 -> cmd 실행
+cmd 창에서 아래의 팩키지 설치
+
+- 주요 팩키지 설치 :
+pip install --upgrade pip
+pip install palettable
+pip install image
+pip install matplotlib
+
+- numpy 설치
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
+
+- wordcloud 설치
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud
+
+python 버전에 맞는 파일(numpy, wordcloud) 다운로드 후
+python 버전 확인-> cmd 실행-> python 실행
+pip install 다운로드 파일
+
+pillow API
+https://pillow.readthedocs.io/en/5.2.x/reference/ImageFilter.html#module-PIL.ImageFilter

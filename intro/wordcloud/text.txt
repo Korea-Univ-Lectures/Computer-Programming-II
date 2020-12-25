@@ -1,0 +1,56 @@
+Hanging inside a gold frame on a pristine white wall in Christie¡¯s Central London Gallery is a dark, moody portrait of a man in Puritan-style black clothes?the work, it seems, of some Old Master. But scrawled in the bottom right corner, there¡¯s an unexpected signature: a mathematical equation.
+
+This is Edmond de Belamy by French art collective Obvious?or, more accurately, by an algorithm designed by Obvious. 
+
+¡°The whole process is about humans having as little input as possible in the finished piece,¡± says Gauthier Vernier, one of three 25 year-old French men who started Obvious in April 2017 out of their apartment in Paris. Since then, by teaching a computer about art history and showing it how to make its own work, Obvious have produced 11 artworks with the help of artificial intelligence.
+The team¡¯s motto is ¡°Creativity isn¡¯t just for humans.¡± Now, they¡¯re starting to convince the art world that they¡¯re right. In February, Obvious sold its first piece, Le Comte de Belamy to Paris-based collector Nicolas Laugero-Lasserre for ¢æ10,000 ($11,430). In October they¡¯re auctioning Edmond at Christie¡¯s in New York, the first auction of an AI-generated work at a major auction house.
+
+Richard Lloyd, head of International Head of Prints and Multiples at Christies, arranged the auction and believes it will lay bare fundamental questions about art and creativity. ¡°Everybody has their own definition of a work of art,¡± he says. ¡°I¡¯ve tended to think human authorship was quite important?that link with someone on the other side. But you could also say art is in the eye of the beholder. If people find it emotionally charged and inspiring then it is. If it waddles and it quacks, it¡¯s a duck.¡±
+
+
+
+
+ 
+Edmond de Belamy, which goes on sale at Christie's in New York in October, hangs in the auction house's London Gallery in July
+Edmond de Belamy, which goes on sale at Christie's in New York in October, hangs in the auction house's London Gallery in July Christie's 
+
+There¡¯s a whole Belamy family, including Le Comte, La Comtesse, Le Baron and La Baronne de Belamy?all slightly trippy, swirling portraits that look like they¡¯re from the 18th century. To make them, Obvious used Generative Adversarial Networks (GANs), a kind of algorithm first created in 2014 by Ian Goodfellow, an American AI researcher, now based in San Francisco, who published his idea in an influential paper he wrote while at the University of Montreal. (Obvious named their first works Belamy, a rough translation of Goodfellow, in tribute to him.) First, the Obvious team needed to code the networks to fit their own criteria. ¡°It¡¯s like building a bike?if you forget a part, it¡¯s not going to work,¡± says Hugo Caselles-Dupre, a PhD student of AI who is responsible for much of the tech side of Obvious¡¯ work.
+
+
+
+
+The team collected a set of 15,000 portraits from online art encyclopedia WikiArt, spanning the 14th to the 19th century, and fed them into the GAN algorithm. GAN algorithms have two parts: the generator and the discriminator. The generator learned the ¡®rules¡¯ of the portraits, ¡°for example, everything has two eyes and a nose,¡± Caselles-Dupre says, describing a process that takes about two days. Then it starts to create new images based on those rules. Meanwhile, the discriminator¡¯s job is to review the images and guess which are ¡®real¡¯ ones from the dataset and which are ¡®fake ones¡¯ from the generator. 
+
+As the generator attempts to fool the discriminator, it learns with each failure. When it succeeds, the process is finished and you have a new image. It¡¯s just not a copy or an amalgamation of the existing 15,000 images; ¡°Think of it as the 15,001st image,¡± Caselles-Dupre says. ¡°It¡¯s an original image. That¡¯s what¡¯s so cool.¡± They call their new art movement ¡°GAN-ism.¡±
+
+
+
+
+Obvious isn¡¯t the only group working on AI Art?the Art and AI research Institute at Rutgers University in New Jersey have been experimenting with it since 2012. In 2017 its researchers said they had used artificial intelligence to produce new styles of art that did not conform to any of those previously conceived by humans, raising questions about the limits of human imagination. Robbie Barrat, a college student from West Virginia, received praise for his own AI-generated ¡®nudes¡¯ on Twitter in March.
+
+But Obvious is one of the first groups to bring its work to life with tangible artworks. Pierre Fautrel, the third and final member of the team, says that gives them an edge over AI art shown on blogs or websites when it comes to convincing the art world that what they¡¯re doing is worthwhile. ¡°The conservative art world is more accepting of the physical pieces,¡± he says. ¡°They get that we¡¯re not trying to trick the art world. We want to be contemporary artists.¡±
+
+
+
+
+
+
+ 
+Le Baron de Belamy
+Le Baron de Belamy OBVIOUS 
+
+Despite some uncertainty around calling it art?including from Lloyd?the team has been surprised by the level of interest in their work. ¡°One thing about our art is that nobody is indifferent to it,¡± Fautrel says. ¡°People either love it or really like it, or basically hate it. But nobody says whatever.¡±
+
+
+
+
+As well as philosophical questions, discussions concerning the growing capabilities of AI often spark fear of job losses and suspicion. Some have suggested that AI¡¯s ability to create thousands of new, unique images at the touch of a button is a threat to the principle of scarcity that gives art some of its value.
+
+But Caselles-Dupre insists they¡¯re not viewing AI as a mass-producing replacement for human artists. He compares today¡¯s experiments with AI to the dawn of photography in the mid 1800¡¯s, when miniature portrait artists lost their jobs. ¡°Back then people were saying that photography is not real art and people who take pictures are like machines,¡± he says. ¡°And now we can all agree that photography has become a real branch of art.¡±
+
+
+
+
+Soon, Obvious plans to play with specific styles like impressionism, and experiment with samples from different cultures to create new images ¡°We¡¯re really interested in the Asian art market,¡± says Fautrel. But for their first collection, the team wanted to evoke ¡°the first thing most people think of when they think of art, which is a old-looking portraits in a museum with a golden frame,¡± says Vernier. ¡°We wanted to use these parallels, to stress the connection with ¡®proper art,¡¯ because we don¡¯t just want to do graphic design or creative coding.¡±
+
+For Lloyd, the Belamys¡¯ proximity to human-made art offers a first taste of what will one day become a common experience. ¡°We¡¯re all going to go through this culture shock again and again where we think we¡¯re talking to or interacting with a human and suddenly we realize it¡¯s a robot,¡± Lloyd says. ¡°It¡¯s a lightbulb moment that we¡¯ll keep having. Online, on the phone, in public space. Obvious¡¯ work is just the beginning.¡±
